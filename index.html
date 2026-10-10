@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kotaro Wataki</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <p>Kotaro Wataki</p>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#works">Works</a>
+            </nav>
+        </header>
+        <main>
+            <section id="top">
+            
+                <img src="./media/top_ss.jpg" width="40%" alt="Kotaro Wataki">
+                <h1>
+                    Kotaro Wataki<br>
+                    Portfolio
+                </h1>
+            </section>
+            <section id="about">
+                <h3>About</h3>
+                <p>
+                    渡木　冴太朗<br>
+                    東京都市大学デザイン・データ科学部
+                </p>
+                <p>
+                    好きな料理：ボロネーゼ、しょうゆラーメン
+                    好きなこと：スポーツ視聴、和を感じる場所に行くこと
+                </p>
+            </section>
+            <section id="works">
+                <h3>Works</h3>
+                <div class="works-controls">
+                    <select id="category">
+                        <option value="all">すべてのカテゴリ</option>
+                        <option value="美術館">美術館</option>
+                        <option value="神社">神社</option>
+                        <option value="庭園">庭園</option>
+                    </select>
+                    <select id="sort">
+                        <option value="new">新しい順</option>
+                        <option value="old">古い順</option>
+                        <option value="title">タイトル順</option>
+                    </select>
+                </div>
+                <div id="works-grid"></div>
+            </section>
+        </main>
+        <footer>
+            <span>@ 2026 Kotaro Wataki</span>
+        </footer>
+        <script src="works.js"></script>
+    </body>
+</html>
