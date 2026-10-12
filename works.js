@@ -72,7 +72,6 @@ fetch("works.csv")
                     return a.title.localeCompare(b.title, "ja");
                 });
             }
-        }
         
         grid.innerHTML = "";
 
@@ -84,7 +83,7 @@ fetch("works.csv")
 
             card.innerHTML =
                 '<a href="' + work.link + '">' +
-                    '<img src="' + work.image + '"alt="' + work.title + '">' +
+                    '<img src="' + work.image + '" alt="' + work.title + '">' +
                     '<div class="work-info">' +
                         '<p class="work-category">' + work.category + '</p>' +
                         '<h4>' + work.title + '</h4>' +
@@ -95,6 +94,8 @@ fetch("works.csv")
 
             grid.appendChild(card);
         });
+
+    }
     
         displayWorks();
 
