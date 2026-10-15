@@ -4,7 +4,7 @@ fetch("works.csv")
     })
     .then(function(data) {
 
-        var rows = data.trim().split("\n");
+        var rows = data.trim().split(/\r?\n/);
 
         var headers = rows[0].split(",");
 
@@ -15,7 +15,7 @@ fetch("works.csv")
             var work ={};
 
             headers.forEach(function(header, index) {
-                work[header] = values[index];
+                work[header.trim()] = (values[index] || "").trim();
             });
 
             return work;
@@ -83,7 +83,7 @@ fetch("works.csv")
 
             card.innerHTML =
                 '<a href="' + work.link + '">' +
-                    '<img src="' + work.image + '" alt="' + work.title + '">' +
+                    '<img src="' + work.image + '" ghalt="' + work.title + '">' +
                     '<div class="work-info">' +
                         '<p class="work-category">' + work.category + '</p>' +
                         '<h4>' + work.title + '</h4>' +
